@@ -5,3 +5,7 @@ from login
 where uname = '?' and upass = '?';
 
 -- createAccount()
+
+select max(uid)
+from login
+where uid like '1%';
