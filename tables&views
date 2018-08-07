@@ -142,3 +142,8 @@ check (iprice > 0)
 create view cproduct as
   select * 
   from product natural join pprice;
+  
+create view sorder as
+  select "oid", "cid", "pid", "qty", "street", "city", "state", "zip", "status", "otime"
+  from orders natural join cinfo;
+
