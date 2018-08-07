@@ -1,8 +1,8 @@
 create table login (
-  uid char(5).
-  uname varchar(20),
-  upass varchar(20),
+  uid char(5) unique,
+  uname varchar(20) unique,
+  upass varchar(20) unique,
   primary key(uid, uname, upass)
 );
 
-insert into login values ("00001", "clive", "gomes"), ("00002", "riley", "scott");
+insert into login values ('10001', 'clive', 'gomes'), ('10002', 'riley', 'scott');
