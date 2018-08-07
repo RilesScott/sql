@@ -1,0 +1,7 @@
+-- checkCredentials()
+
+select uid
+from login
+where uname = '?' and upass = '?';
+
+-- createAccount()
