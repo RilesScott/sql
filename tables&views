@@ -39,7 +39,7 @@ fname varchar(20) not null,
 lname varchar(20) not null,
 city varchar(20) not null,
 state char(2) not null,
-street char(20) not null,
+street varchar(20) not null,
 zip char(5) not null,
 salary numeric(10,2) not null default 0.0,
 title varchar(20) not null,
@@ -79,7 +79,7 @@ check (qty >= 0)
 );
 
 create table orders(
-oid char(5) not null, -- 6 digit number starting with 9
+oid char(6) not null, -- 6 digit number starting with 9
 cid char(5) not null,
 pid char(5) not null,
 qty int not null default 0,
