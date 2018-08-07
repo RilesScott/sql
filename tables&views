@@ -1,14 +1,14 @@
 -- Tables
 
 create table login (
-  uid char(5) unique,
+  uid char(5) unique, -- 5 digit number starting with 1 or 2
   uname varchar(20) unique,
   upass varchar(20),
   primary key(uid)
 );
 
 create table customer(
-cid char(5),
+cid char(5), -- 5 digit number starting with 2
 fname varchar(10) not null,
 lname varchar(10) not null,
 balance numeric(20,2) default 0.0,
@@ -34,7 +34,7 @@ foreign key(cid) references customer
 );
 
 create table staff(
-sid char(5),
+sid char(5), -- 5 digit number starting with 1
 fname varchar(20) not null,
 lname varchar(20) not null,
 city varchar(20) not null,
@@ -49,7 +49,7 @@ primary key(sid)
 );
 
 create table product(
-pid char(5),
+pid char(5), -- 5 digit number starting with 3
 pname varchar(200) not null,
 size numeric(10,2) not null,
 category varchar(10) not null,
@@ -68,7 +68,7 @@ check (price > 0)
 );
 
 create table cart(
-ccid char(6) not null,
+ccid char(5) not null, -- 5 digit number starting with 8
 cid char(5) not null,
 pid char(5) not null,
 qty int not null default 0,
@@ -79,7 +79,7 @@ check (qty >= 0)
 );
 
 create table orders(
-oid char(6) not null,
+oid char(5) not null, -- 5 digit number starting with 9
 cid char(5) not null,
 pid char(5) not null,
 qty int not null default 0,
@@ -94,7 +94,7 @@ check (qty >= 0)
 );
 
 create table warehouse(
-wid char(5) not null,
+wid char(5) not null, -- 5 digit number starting with 4
 street varchar(50) not null,
 city varchar(20) not null,
 state char(2) not null,
@@ -116,7 +116,7 @@ check (qty >= 0)
 );
 
 create table supplier(
-ssid char(5),
+ssid char(5), -- 5 digit number starting with 5
 fname varchar(10) not null,
 lname varchar(10) not null,
 street varchar(50) not null,
