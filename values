@@ -1,0 +1,1 @@
+insert into login values ('10001', 'clive', 'gomes'), ('10002', 'riley', 'scott');
