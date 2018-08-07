@@ -7,8 +7,6 @@ create table login (
   primary key(uid)
 );
 
-insert into login values ('10001', 'clive', 'gomes'), ('10002', 'riley', 'scott');
-
 create table customer(
 cid char(5),
 fname varchar(10) not null,
