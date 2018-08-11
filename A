@@ -2,20 +2,20 @@
 
 -- Strong Entities
 
-create table user (
+create table users (
   uid char(5),
   uname varchar(20) unique,
   upass varchar(20),
   primary key(uid)
 );
-create index uidx on user(uid); 
+create index uidx on users(uid); 
 
 create table customer(
   cid char(5),
   fname varchar(10) not null,
   lname varchar(10) not null,
-  balance numeric(20,2) default 0.0,
-  primary key (cid),
+  balance numeric(10,2) default 0.0,
+  primary key(cid),
   check(balance>=0)
 );
 create index cidx on customer(cid);
