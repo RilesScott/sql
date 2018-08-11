@@ -2,13 +2,13 @@
 
 -- Strong Entities
 
-create table login (
+create table user (
   uid char(5),
   uname varchar(20) unique,
   upass varchar(20),
   primary key(uid)
 );
-create index uidx on login(uid); 
+create index uidx on user(uid); 
 
 create table customer(
   cid char(5),
